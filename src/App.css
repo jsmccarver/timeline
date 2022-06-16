@@ -18,8 +18,9 @@
   height: 580px;
   overflow-x: auto;
   flex-direction: row;
-  border: 1px black solid;
+
   overflow-x: hidden;
+  box-shadow: 0px 2px 15px 2px grey;
 }
 
 .centerline {
@@ -48,12 +49,6 @@
 .year-wrapper {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-.year-wrapper:first-child {
-  padding-left: 2rem;
-}
-.year-wrapper:last-child {
-  padding-right: 2rem;
 }
 
 .year-wrapper:nth-child(even) .text {
