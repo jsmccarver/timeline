@@ -1,6 +1,5 @@
 import "./App.css";
 import { useRef } from "react";
-import ScrollContainer from "react-indiana-drag-scroll";
 const timeline = [
   {
     year: 1986,
