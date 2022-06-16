@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: center;
 }
+.title {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 .title h1 {
   text-align: center;
 }
@@ -155,4 +159,25 @@
   transform: translateY(-400px);
   border-top: 2px solid;
   border-bottom: 0px solid;
+}
+.arrow-buttons {
+  margin: 0 auto;
+  display: flex;
+  padding: 1rem 0rem;
+}
+.arrow-buttons button:first-of-type svg {
+  transform: rotate(180deg);
+}
+.arrow-buttons button {
+  margin: 0px 1rem;
+  padding: 3px 0.5rem;
+  cursor: pointer;
+  border: 0px;
+  background-color: transparent;
+}
+.arrow-buttons button svg {
+  transition: fill 200ms;
+}
+.arrow-buttons button:hover svg {
+  fill: red;
 }

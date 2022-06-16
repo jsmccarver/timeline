@@ -61,13 +61,21 @@ const timeline = [
 
 function App() {
   const myRefs = useRef([]);
+  var index = 0;
   function handleClick(i) {
+    if (i <= 1) {
+      i = 1;
+    }
+    if (i > myRefs.current.length - 2) {
+      i = myRefs.current.length - 2;
+    }
     myRefs.current[i].scrollIntoView({
       behavior: "smooth",
       block: "center",
       inline: "center",
     });
     console.log(i);
+    index = i;
   }
   return (
     <div className="max">
@@ -137,6 +145,39 @@ function App() {
               })}
             </div>
           </div>
+        </div>
+
+        <div className="arrow-buttons">
+          <button
+            onClick={() => {
+              index = index - 1;
+              handleClick(index);
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M6.185 4.843l11.927 7.157-11.927 7.157 2.982-7.157-2.982-7.157zm-4.185-4.843l5 12-5 12 20-12-20-12z" />
+            </svg>
+          </button>
+          <button
+            onClick={() => {
+              index = index + 1;
+              handleClick(index);
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M6.185 4.843l11.927 7.157-11.927 7.157 2.982-7.157-2.982-7.157zm-4.185-4.843l5 12-5 12 20-12-20-12z" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
